@@ -1,0 +1,30 @@
+.wrapper {
+  border: 1px solid red;
+  height: 400px;
+  overflow: auto;
+
+  :global {
+    .ant-collapse {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      height: 100%;
+
+      .ant-collapse-item {
+        min-height: 48px;
+      }
+
+      .ant-collapse-item-active {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        overflow: hidden;
+
+        .ant-collapse-content {
+          overflow: auto;
+          flex: 1;
+        }
+      }
+    }
+  }
+}
